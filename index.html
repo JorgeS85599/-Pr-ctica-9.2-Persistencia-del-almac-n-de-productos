@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4.1</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link href="./css/main.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta name="description" content="Ejercicio de Javascript">
+    <meta name="author" content="Juan Segura">
+    <meta name="keywords" content="JavaScript, Ejercicio, HTML5, DOM">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Almacén central de productos - ACME SL</h1>
+        </header>
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav">
+                <a class="nav-item nav-link" id="showProd" href="#">Ver productos</a>
+                <a class="nav-item nav-link" id="addProd" href="#">Añadir producto</a>
+              </div>
+            </div>
+          </nav>
+
+        <!-- Zona para mostrar mensajes al usuario -->
+        <div class="row" id="messages"></div>
+
+            <!-- Almacén de productos -->
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12" id="almacen">
+                <table class="table table-striped table-hover">
+                    <thead class="thead-dark bg-light">
+                        <tr>
+                            <th>Id</th>
+                            <th>Nombre</th>
+                            <th>Uds.</th>
+                            <th>Precio/u</th>
+                            <th>Importe</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Aquí insertaremos los productos-->
+                    </tbody>
+                    <tfoot>
+                        <th colspan="4">Importe total del almacén:</th>
+                        <th id="total">0.00 €</th>
+                        <th></th>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+
+        <!-- Acciones sobre el almacén -->
+        <div class="row">
+            <div class="col-sm-6 col-md-4 col-lg-4 hide" id="form">
+                <form id="new-prod">
+                    <fieldset>
+                        <legend>Nuevo producto</legend>
+                        <!-- Aquí los inputs y botones del form -->
+                        <label for="newprod-id" id="newprod-id-label" class="hide">Id: </label><br>
+                        <input type="number" id="newprod-id-input" class="hide" name="newprod-id" disabled><br>
+                        <label for="newprod-name">Nombre: </label><br>
+                        <input type="text" id="newprod-name" name="newprod-name" required minlength="3"><br>
+                        <label for="newprod-price">Precio/u: </label><br>
+                        <input type="number" id="newprod-price" name="newprod-price" step="0.01" value="0.00" placeholder="0.00"><br>
+                        <label for="newprod-units" id="newprod-units-label" class="hide">Unidades: </label><br>
+                        <input type="number" id="newprod-units-input" class="hide" name="newprod-units" min="0" step="1"><br>
+                        <button type="submit" class="btn btn-default btn-primary">Añadir</button>
+                        <button type="reset" class="btn btn-danger">Reset</button>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+        <footer><small>Diseño Web en Entorno Cliente - Juan Segura</small></footer>
+
+        <script src="./dist/main.js"></script>
+</body>
+
+</html>
