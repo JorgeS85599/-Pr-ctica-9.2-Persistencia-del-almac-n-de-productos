@@ -1,0 +1,38 @@
+{
+  "products": [
+    {
+      "name": "ejejeje",
+      "price": 0,
+      "id": 1,
+      "units": 3
+    },
+    {
+      "name": "ejejeje",
+      "price": 0,
+      "id": 2,
+      "units": -1
+    },
+    {
+      "name": "ejejeje",
+      "price": 0,
+      "id": 3
+    },
+    {
+      "name": "ejejeje",
+      "price": 0,
+      "id": 4
+    },
+    {
+      "name": "ejejeje",
+      "price": 0,
+      "id": 5,
+      "units": 0
+    },
+    {
+      "name": "epepepe",
+      "price": 25.01,
+      "id": 6,
+      "units": 3
+    }
+  ]
+}
